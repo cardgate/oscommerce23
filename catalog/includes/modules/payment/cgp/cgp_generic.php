@@ -453,7 +453,7 @@ class cgp_generic {
             case "KLARNA" :
                 $payment_option = tep_draw_hidden_field( 'option', 'klarna' );
                 break;
-            
+
             case "BITCOIN" :
                 $payment_option = tep_draw_hidden_field( 'option', 'bitcoin' );
                 break;
@@ -644,7 +644,7 @@ class cgp_generic {
                 $url = 'https://secure.curopayments.net/cache/idealDirectoryCUROPayments.dat';
             }
         }
-        
+
         if ( !ini_get( 'allow_url_fopen' ) || !function_exists( 'file_get_contents' ) ) {
             $result = false;
         } else {

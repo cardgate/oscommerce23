@@ -40,24 +40,30 @@ function recurse_copy( $src, $dst, $is_dir ) {
     if ( $is_dir ) {
         // copy directory
         if ( is_dir( $src ) ) {
-            $dir = opendir( $src );
-            @mkdir( $dst );
-            while ( false !== ( $file = readdir( $dir )) ) {
-                if ( ( $file != '.' ) && ( $file != '..' ) ) {
-                    if ( is_dir( $src . '/' . $file ) ) {
-                        recurse_copy( $src . '/' . $file, $dst . '/' . $file );
-                    } else {
-                        copy( $src . '/' . $file, $dst . '/' . $file );
+            if ( $src != '.svn' ) {
+                $dir = opendir( $src );
+                @mkdir( $dst );
+                while ( false !== ( $file = readdir( $dir )) ) {
+                    if ( ( $file != '.' ) && ( $file != '..' ) ) {
+                        if ( is_dir( $src . '/' . $file ) ) {
+                            recurse_copy( $src . '/' . $file, $dst . '/' . $file, true );
+                        } else {
+                            if ( strpos( $file, '.DS_Store' ) === false ) {
+                                copy( $src . '/' . $file, $dst . '/' . $file );
+                            }
+                        }
                     }
                 }
+                closedir( $dir );
             }
-            closedir( $dir );
         } else {
             echo 'dir ' . $src . ' is not found!';
         }
     } else {
-        // copy file
-        copy( $src , $dst );
+        if ( strpos( $src, '.DS_Store' ) === false ) {
+            // copy file
+            copy( $src, $dst );
+        }
     }
 }
   
@@ -170,11 +176,6 @@ $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_vpay.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
-$src = '../includes/languages/dutch/modules/payment/cgp_webmoney.php';
-$dst = 'catalog/includes/languages/dutch/modules/payment/cgp_webmoney.php';
-$is_dir = false;
-array_push( $data, data_element( $src, $dst, $is_dir ) );
-
 $src = '../includes/languages/dutch/modules/payment/cgp_generic.php';
 $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_generic.php';
 $is_dir = false;
@@ -267,11 +268,6 @@ $dst = 'catalog/includes/modules/payment/cgp_vpay.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
-$src = '../includes/modules/payment/cgp_webmoney.php';
-$dst = 'catalog/includes/modules/payment/cgp_webmoney.php';
-$is_dir = false;
-array_push( $data, data_element( $src, $dst, $is_dir ) );
-
 $src = '../includes/modules/payment/cgp_afterpay.php';
 $dst = 'catalog/includes/modules/payment/cgp_afterpay.php';
 $is_dir = false;
@@ -354,11 +350,6 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/modules/payment/cgp_vpay.php';
 $dst = 'catalog/includes/modules/payment/cgp_vpay.php';
-$is_dir = false;
-array_push( $data, data_element( $src, $dst, $is_dir ) );
-
-$src = '../includes/modules/payment/cgp_webmoney.php';
-$dst = 'catalog/includes/modules/payment/cgp_webmoney.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
