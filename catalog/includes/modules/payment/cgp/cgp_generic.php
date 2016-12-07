@@ -61,14 +61,10 @@ class cgp_generic {
             $this->update_status();
         }
 
-        if ( !empty( $_SERVER['CGP_GATEWAY_URL'] ) ) {
-            $this->form_action_url = $_SERVER['CGP_GATEWAY_URL'];
+        if ( $this->is_test ) {
+            $this->form_action_url = 'https://secure-staging.curopayments.net/gateway/cardgate/';
         } else {
-            if ( $this->is_test ) {
-                $this->form_action_url = 'https://secure-staging.curopayments.net/gateway/cardgate/';
-            } else {
-                $this->form_action_url = 'https://secure.curopayments.net/gateway/cardgate/';
-            }
+            $this->form_action_url = 'https://secure.curopayments.net/gateway/cardgate/';
         }
     }
 
