@@ -8,7 +8,7 @@
 
 ## Support
 
-This plugin supports osCommerce version **2.3.x0**.
+This plugin supports osCommerce version **2.3.x**.
 
 ## Preparation
 
