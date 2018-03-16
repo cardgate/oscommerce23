@@ -12,8 +12,8 @@ Deze plug-in is geschikt voor osCommerce versie **2.3.x**.
 
 ## Voorbereiding
 
-Voor het gebruik van deze module zijn CardGate gegevens nodig
-Bezoek hiervoor [Mijn CardGate](https://my.cardgate.com/) en haal je Site ID and Hash Key op  
+Voor het gebruik van deze module zijn CardGate gegevens nodig.  
+Bezoek hiervoor [Mijn CardGate](https://my.cardgate.com/) en haal je Site ID and Hash Key op,  
 of neem contact op met je accountmanager.
 
 ## Installatie
