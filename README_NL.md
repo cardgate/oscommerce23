@@ -4,7 +4,7 @@
 
 ## Support
 
-Deze plug-in is geschikt voor osCommerce versie **2.3.x**.
+Deze plug-in is geschikt voor osCommerce versie **2.3.x** .
 
 ## Voorbereiding
 
@@ -51,7 +51,7 @@ of neem contact op met je accountmanager.
 
 11. Klik op **Bewaren** wanneer alle instellingen gedaan zijn.
 
-12. Herhaal de **stappen 3 tot 11** voor alle gewenste betaalmethoden.
+12. Herhaal de **stappen 3 tot en met 11** voor alle gewenste betaalmethoden.
 
 13. Ga naar [Mijn CardGate](https://my.cardgate.com/), kies **Sites** en selecteer de juiste site.
 
