@@ -51,7 +51,7 @@ Please visit [My CardGate](https://my.cardgate.com/) and retrieve your credentia
 
 12. Repeat steps **3 to 11** for all the desired payment methods.
 
-13. Go to my CardGate, choose **Sites** and select the appropriate site.
+13. Go to [My CardGate](https://my.cardgate.com/), choose **Sites** and select the appropriate site.
 
 14. Go to **Connection to the website** and enter the **Callback URL**, for example:  
     **http://mywebshop.com/ext/modules/payment/cgp/cgp.php**  
