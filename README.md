@@ -4,16 +4,16 @@
 
 ## Support
 
-This plugin supports osCommerce version **2.3.x**.
+This plugin supports osCommerce version **2.3.x** .
 
 ## Preparation
 
-The usage of this module requires that you have obtained CardGate security credentials.
-Please visit [My Cardgate](https://my.cardgate.com/) and retrieve your Site ID and hash key, or contact your accountmanager.
+The usage of this module requires that you have obtained CardGate security credentials.  
+Please visit [My CardGate](https://my.cardgate.com/) and retrieve your credentials, or contact your accountmanager.
 
 ## Installation
 
-1. Download and unzip the catalog.zip file to your desktop.
+1. Download and unzip the most recent [source code](https://github.com/cardgate/oscommerce23/releases/) file on your desktop.
 
 2. Upload **all folders and files** in the **catalog** folder, to the **root** folder of your shop.
 
@@ -21,23 +21,23 @@ Please visit [My Cardgate](https://my.cardgate.com/) and retrieve your Site ID a
 ## Configuration
 
 1. Before the **CardGate administration** will be visible, the **admin/includes/column_left.php** 
-   file of osCommerce needs to be modified.
-   Line 23 is: **include(DIR_WS_BOXES . 'tools.php');**
-   Add the following line of code below this line: 
-   **include(DIR_WS_BOXES . 'cgp_orders.php');**
-   (Please note the **semicolon** at the end of the line!)
+   file of osCommerce needs to be modified.  
+   Line 23 is: **include(DIR_WS_BOXES . 'tools.php');**  
+   Add the following line of code below this line:  
+   **include(DIR_WS_BOXES . 'cgp_orders.php');**  
+   (Please note the **semicolon** at the end of the line!)  
    
 2. Go to the **admin section** of your webshop, and on the left, select **Modules, Payment**.
 
-3. On the right, click on **Install Module**, and select the payment module you wish to activate.
-   (All CardGate modules have **Card Gate Plus** written behind the name of the payment method.
-   On the right click on **Install Module**.
+3. On the right, click on **Install Module**, and select the payment module you wish to activate.  
+   (All CardGate modules have **Card Gate Plus** written behind the name of the payment method.  
+   On the right click on **Install Module**.  
    
 4. On the right, click on the **Edit** button of the installed payment module.
 
-5. Select **true** to activate the payment module
+5. Select **true** to activate the payment module.
 
-6. Now enter the **Site ID**, and the **Hash Key** which you can find at **Sites** on My CardGate 
+6. Now enter the **site ID**, and the **hash key** which you can find at **Sites** on My CardGate. 
 
 7. Enter the default **gateway language**, for example **en** for English, or **nl** for Dutch.
 
@@ -53,12 +53,12 @@ Please visit [My Cardgate](https://my.cardgate.com/) and retrieve your Site ID a
 
 13. Go to my CardGate, choose **Sites** and select the appropriate site.
 
-14. Go to **Connection to the website** and enter the **Callback URL**, for example:
-    **http://mywebshop.com/ext/modules/payment/cgp/cgp.php**
-    (Replace **http://mywebshop.com** with the URL of your webshop.)
+14. Go to **Connection to the website** and enter the **Callback URL**, for example:  
+    **http://mywebshop.com/ext/modules/payment/cgp/cgp.php**  
+    (Replace **http://mywebshop.com** with the URL of your webshop.)  
     
-15. When you are **finished testing** make sure that you switch **all activated payment methods** from **Test
-    Mode** to **Live mode** and save it (**Save**)
+15. When you are **finished testing** make sure that you switch **all activated payment methods** from **Test Mode**  
+    to **Live mode** and save it (**Save**).
     
 ## Requirements
 
