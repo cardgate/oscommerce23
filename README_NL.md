@@ -4,17 +4,17 @@
 
 ## Support
 
-Deze plug-in is geschikt voor osCommerce versie **2.3.x**.
+Deze plug-in is geschikt voor osCommerce versie **2.3.x** .
 
 ## Voorbereiding
 
 Voor het gebruik van deze module zijn CardGate gegevens nodig.  
-Bezoek hiervoor [Mijn CardGate](https://my.cardgate.com/) en haal je Site ID and Hash Key op,  
+Bezoek hiervoor [Mijn CardGate](https://my.cardgate.com/) en haal je gegevens op,  
 of neem contact op met je accountmanager.
 
 ## Installatie
 
-1. Download en unzip het **catalog.zip** bestand op je bureaublad.
+1. Download en unzip de meest recente [source code](https://github.com/cardgate/oscommerce23/releases/) op je bureaublad.
 
 2. Upload **alle mappen en bestanden** in de **catalog map** naar de **root map** van je webshop.
 
@@ -38,7 +38,7 @@ of neem contact op met je accountmanager.
 
 5. Selecteer **true** om de betaalmodule te activeren.
 
-6. Vul nu de **Site ID** en de **Hash Key (Codeersleutel)** in, deze kun je vinden bij **Sites**  
+6. Vul nu de **site ID** en de **hash key** in, deze kun je vinden bij **Sites**  
    op [Mijn CardGate](https://my.cardgate.com/).  
 
 7. Vul de standaard **gateway taal** in, bijvoorbeeld **en** voor Engels of **nl** voor Nederlands.
@@ -51,13 +51,13 @@ of neem contact op met je accountmanager.
 
 11. Klik op **Bewaren** wanneer alle instellingen gedaan zijn.
 
-12. Herhaal de **stappen 3 tot 11** voor alle gewenste betaalmethoden.
+12. Herhaal de **stappen 3 tot en met 11** voor alle gewenste betaalmethoden.
 
 13. Ga naar [Mijn CardGate](https://my.cardgate.com/), kies **Sites** en selecteer de juiste site.
 
 14. Vul bij **Technische koppeling** de **Callback URL** in, bijvoorbeeld:  
-    **http://www.mijnwebshop.com/ext/modules/payment/cgp/cgp.php**
-    (Vervang **http://mijnwebshop.com** met de URL van je webshop)
+    **http://www.mijnwebshop.com/ext/modules/payment/cgp/cgp.php**  
+    (Vervang **http://mijnwebshop.com** met de URL van je webshop.)
     
 15. Zorg ervoor dat je na het testen **alle geactiveerde betaalmethoden** omschakelt van **Test mode** naar  
     **Live mode** en sla het op (**Bewaren**).  
