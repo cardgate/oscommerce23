@@ -84,6 +84,13 @@ define('MODULE_PAYMENT_CGP_PAYPAL_TEXT_TITLE', 'PayPal');
 define('MODULE_PAYMENT_CGP_PAYPAL_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Bezoek www.CardGate.com voor meer informatie</a>');
 
 /**
+ * Paysafecard specific texts
+ */
+define('MODULE_PAYMENT_CGP_PAYSAFECARD_TEXT_TITLE', 'Paysafecard');
+define('MODULE_PAYMENT_CGP_PAYSAFECARD_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Bezoek www.CardGate.com voor meer informatie</a>');
+
+
+/**
  * Giropay specific texts
  */
 define('MODULE_PAYMENT_CGP_GIROPAY_TEXT_TITLE', 'Giropay');
