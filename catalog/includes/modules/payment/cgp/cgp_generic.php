@@ -51,7 +51,7 @@ class cgp_generic {
         $this->title = @constant( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_TEXT_TITLE" );
         $this->description = @constant( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_TEXT_DESCRIPTION" );
         // the cardgate version number is the first no. in the signature
-        $this->signature = "cardgateplus|cardgateplus|3.1.1|2.3";
+        $this->signature = "cardgateplus|cardgateplus|3.1.2|2.3";
         $this->sort_order = defined( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_SORT_ORDER" ) ? constant( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_SORT_ORDER" ) : 0;
         $this->enabled = ( defined( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_STATUS" ) && ( constant( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_STATUS" ) == 'True' ) ? true : false );
         $this->is_test = ( defined( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_MODE" ) && ( constant( "MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_MODE" ) == 'Test' ) ? true : false );
@@ -503,6 +503,9 @@ class cgp_generic {
                 break;
             case "PRZELEWY24" :
                 $payment_option = tep_draw_hidden_field( 'option', 'przelewy24' );
+                break;
+            case "BILLINK" :
+                $payment_option = tep_draw_hidden_field( 'option', 'billink' );
                 break;
         }
         

@@ -103,6 +103,12 @@ define( 'MODULE_PAYMENT_CGP_BANKTRANSFER_TEXT_TITLE', 'Bank Transfer' );
 define( 'MODULE_PAYMENT_CGP_BANKTRANSFER_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
 
 /**
+ * Billink specific texts
+ */
+define( 'MODULE_PAYMENT_CGP_BILLINK_TEXT_TITLE', 'Billink' );
+define( 'MODULE_PAYMENT_CGP_BILLINK_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
+/**
  * Direct Debit specific texts
  */
 define( 'MODULE_PAYMENT_CGP_DIRECTDEBIT_TEXT_TITLE', 'Direct Debit' );
