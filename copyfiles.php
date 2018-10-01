@@ -126,6 +126,11 @@ $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_giropay.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
+$src = '../includes/languages/dutch/modules/payment/cgp_idealqr.php';
+$dst = 'catalog/includes/languages/dutch/modules/payment/cgp_idealqr.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
 $src = '../includes/languages/dutch/modules/payment/cgp_ideal.php';
 $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_ideal.php';
 $is_dir = false;
@@ -218,6 +223,11 @@ $dst = 'catalog/includes/modules/payment/cgp_giropay.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
+$src = '../includes/modules/payment/cgp_idealqr.php';
+$dst = 'catalog/includes/modules/payment/cgp_idealqr.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
 $src = '../includes/modules/payment/cgp_ideal.php';
 $dst = 'catalog/includes/modules/payment/cgp_ideal.php';
 $is_dir = false;
@@ -300,6 +310,11 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/modules/payment/cgp_giropay.php';
 $dst = 'catalog/includes/modules/payment/cgp_giropay.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_idealqr.php';
+$dst = 'catalog/includes/modules/payment/cgp_idealqr.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
