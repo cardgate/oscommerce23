@@ -495,17 +495,25 @@ class cgp_generic {
             case "GIROPAY" :
                 $payment_option = tep_draw_hidden_field( 'option', 'giropay' );
                 break;
+                
             case "BANKTRANSFER" :
                 $payment_option = tep_draw_hidden_field( 'option', 'banktransfer' );
                 break;
+                
             case "DIRECTDEBIT" :
                 $payment_option = tep_draw_hidden_field( 'option', 'directdebit' );
                 break;
+                
             case "PRZELEWY24" :
                 $payment_option = tep_draw_hidden_field( 'option', 'przelewy24' );
                 break;
+                
             case "BILLINK" :
                 $payment_option = tep_draw_hidden_field( 'option', 'billink' );
+                break;
+                
+            case "IDEALQR" :
+                $payment_option = tep_draw_hidden_field( 'option', 'idealqr' );
                 break;
         }
         
