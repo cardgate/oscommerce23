@@ -83,6 +83,24 @@ define( 'MODULE_PAYMENT_CGP_PAYPAL_TEXT_TITLE', 'PayPal' );
 define( 'MODULE_PAYMENT_CGP_PAYPAL_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
 
 /**
+ * Paysafecard specific texts
+ */
+define( 'MODULE_PAYMENT_CGP_PAYSAFECARD_TEXT_TITLE', 'Paysafecard' );
+define( 'MODULE_PAYMENT_CGP_PAYSAFECARD_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
+/**
+ * Paysafecash specific texts
+ */
+define( 'MODULE_PAYMENT_CGP_PAYSAFECASH_TEXT_TITLE', 'Paysafecash' );
+define( 'MODULE_PAYMENT_CGP_PAYSAFECASH_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
+/**
+ * Gift Card specific texts
+ */
+define( 'MODULE_PAYMENT_CGP_GIFTCARD_TEXT_TITLE', 'Gift Card' );
+define( 'MODULE_PAYMENT_CGP_GIFTCARD_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
+/**
  * Giropay specific texts
  */
 define( 'MODULE_PAYMENT_CGP_GIROPAY_TEXT_TITLE', 'Giropay' );
@@ -93,6 +111,12 @@ define( 'MODULE_PAYMENT_CGP_GIROPAY_TEXT_DESCRIPTION', '<img src="images/icon_po
  */
 define( 'MODULE_PAYMENT_CGP_BANKTRANSFER_TEXT_TITLE', 'Bank Transfer' );
 define( 'MODULE_PAYMENT_CGP_BANKTRANSFER_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
+/**
+ * Billink specific texts
+ */
+define( 'MODULE_PAYMENT_CGP_BILLINK_TEXT_TITLE', 'Billink' );
+define( 'MODULE_PAYMENT_CGP_BILLNK_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
 
 /**
  * Direct Debit specific texts
@@ -123,6 +147,12 @@ define( 'MODULE_PAYMENT_CGP_KLARNA_TEXT_DESCRIPTION', '<img src="images/icon_pop
  */
 define( 'MODULE_PAYMENT_CGP_BITCOIN_TEXT_TITLE', 'Bitcoin' );
 define( 'MODULE_PAYMENT_CGP_BITCOIN_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
+/**
+ * iDEAL QR specific texts
+ */
+define( 'MODULE_PAYMENT_CGP_IDEALQR_TEXT_TITLE', 'iDEAL QR' );
+define( 'MODULE_PAYMENT_CGP_IDEALQR_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
 
 
 ?>
