@@ -89,6 +89,18 @@ define('MODULE_PAYMENT_CGP_PAYPAL_TEXT_DESCRIPTION', '<img src="images/icon_popu
 define('MODULE_PAYMENT_CGP_PAYSAFECARD_TEXT_TITLE', 'Paysafecard');
 define('MODULE_PAYMENT_CGP_PAYSAFECARD_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Bezoek www.CardGate.com voor meer informatie</a>');
 
+/**
+ * Paysafecash specific texts
+ */
+define('MODULE_PAYMENT_CGP_PAYSAFECASH_TEXT_TITLE', 'Paysafecash');
+define('MODULE_PAYMENT_CGP_PAYSAFECASH_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Bezoek www.CardGate.com voor meer informatie</a>');
+
+/**
+ * Gift card specific texts
+ */
+define('MODULE_PAYMENT_CGP_GIFTCARD_TEXT_TITLE', 'Gift Card');
+define('MODULE_PAYMENT_CGP_GIFTCARD_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Bezoek www.CardGate.com voor meer informatie</a>');
+
 
 /**
  * Giropay specific texts

@@ -61,7 +61,7 @@ if ( isset( $_REQUEST ['cgp_notify'] ) && $_REQUEST ['cgp_notify'] == TRUE ) {
     $status = $_POST ['status'];
     $currency = $_POST ['currency'];
     $amount = $_POST ['amount'];
-
+   
     $cgp_data = tep_db_fetch_array( tep_db_query( "SELECT * FROM CGP_orders_table WHERE ref_id=$cgp_id" ) );
     if ( ( $_POST ['billing_option'] != 'creditcard' ) && ( $_POST ['billing_option'] != 'directebanking' ) ) {
         $module_cgp_text = strtoupper( $_POST ['billing_option'] );
@@ -80,13 +80,14 @@ if ( isset( $_REQUEST ['cgp_notify'] ) && $_REQUEST ['cgp_notify'] == TRUE ) {
     if ( md5( $hash_uncoded ) != $_POST ["hash"] ) {
         exit( 'Hash did not match' );
     }
-
+    
     require ( DIR_WS_CLASSES . 'order.php' );
 
     $order = unserialize( base64_decode( $cgp_data ['orderstr'] ) );
 
     $order_total_query = tep_db_query( "select value from " . TABLE_ORDERS_TOTAL . " where orders_id = '" . ( int ) $order_id . "' and class = 'ot_total'" );
     $order_total = tep_db_fetch_array( $order_total_query );
+    
     $order_amount = format_raw( $order_total ['value'], $order->info ['currency'] ) * 100;
 
     if ( ( $order_amount != $amount ) && ( round( $order_amount ) != $amount ) && ( abs( $amount - $order_amount ) > 1 ) ) {

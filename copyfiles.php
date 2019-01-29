@@ -5,7 +5,7 @@ ini_set( "display_errors", 1 );
 
 function zipfiles(){
     // Get real path for our folder
-$rootPath = '/home/richard/websites/oscommerce23/htdocs/_plugin/catalog';
+$rootPath = '/var/www/oscommerce23/htdocs/_plugin/catalog';
 
 // Initialize archive object
 $zip = new ZipArchive();
@@ -106,6 +106,11 @@ $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_banktransfer.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
+$src = '../includes/languages/dutch/modules/payment/cgp_billink.php';
+$dst = 'catalog/includes/languages/dutch/modules/payment/cgp_billink.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
 $src = '../includes/languages/dutch/modules/payment/cgp_bitcoin.php';
 $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_bitcoin.php';
 $is_dir = false;
@@ -118,6 +123,11 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/languages/dutch/modules/payment/cgp_directebanking.php';
 $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_directebanking.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/dutch/modules/payment/cgp_giftcard.php';
+$dst = 'catalog/includes/languages/dutch/modules/payment/cgp_giftcard.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
@@ -161,6 +171,16 @@ $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_paypal.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
+$src = '../includes/languages/dutch/modules/payment/cgp_paysafecard.php';
+$dst = 'catalog/includes/languages/dutch/modules/payment/cgp_paysafecard.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/dutch/modules/payment/cgp_paysafecash.php';
+$dst = 'catalog/includes/languages/dutch/modules/payment/cgp_paysafecash.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
 $src = '../includes/languages/dutch/modules/payment/cgp_przelewy24.php';
 $dst = 'catalog/includes/languages/dutch/modules/payment/cgp_przelewy24.php';
 $is_dir = false;
@@ -187,6 +207,122 @@ $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 
+$src = '../includes/languages/english/modules/payment/cgp_afterpay.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_afterpay.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_americanexpress.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_americanexpress.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_banktransfer.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_banktransfer.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_billink.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_billink.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_bitcoin.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_bitcoin.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_directdebit.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_directdebit.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_directebanking.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_directebanking.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_giftcard.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_giftcard.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_giropay.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_giropay.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_idealqr.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_idealqr.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_ideal.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_ideal.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_klarna.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_klarna.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_maestro.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_maestro.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_mastercard.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_mastercard.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_mistercash.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_mistercash.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_paypal.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_paypal.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_paysafecard.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_paysafecard.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_paysafecash.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_paysafecash.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_przelewy24.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_przelewy24.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_sofortueberweisung.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_sofortueberweisung.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_visa.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_visa.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_vpay.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_vpay.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/languages/english/modules/payment/cgp_generic.php';
+$dst = 'catalog/includes/languages/english/modules/payment/cgp_generic.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+
 
 $src = '../includes/modules/payment/cgp_afterpay.php';
 $dst = 'catalog/includes/modules/payment/cgp_afterpay.php';
@@ -203,6 +339,11 @@ $dst = 'catalog/includes/modules/payment/cgp_banktransfer.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
+$src = '../includes/modules/payment/cgp_billink.php';
+$dst = 'catalog/includes/modules/payment/cgp_billink.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
 $src = '../includes/modules/payment/cgp_bitcoin.php';
 $dst = 'catalog/includes/modules/payment/cgp_bitcoin.php';
 $is_dir = false;
@@ -215,6 +356,11 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/modules/payment/cgp_directebanking.php';
 $dst = 'catalog/includes/modules/payment/cgp_directebanking.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_giftcard.php';
+$dst = 'catalog/includes/modules/payment/cgp_giftcard.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
@@ -255,6 +401,16 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/modules/payment/cgp_paypal.php';
 $dst = 'catalog/includes/modules/payment/cgp_paypal.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_paysafecard.php';
+$dst = 'catalog/includes/modules/payment/cgp_paysafecard.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_paysafecash.php';
+$dst = 'catalog/includes/modules/payment/cgp_paysafecash.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
@@ -293,6 +449,11 @@ $dst = 'catalog/includes/modules/payment/cgp_banktransfer.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
+$src = '../includes/modules/payment/cgp_billink.php';
+$dst = 'catalog/includes/modules/payment/cgp_billink.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
 $src = '../includes/modules/payment/cgp_bitcoin.php';
 $dst = 'catalog/includes/modules/payment/cgp_bitcoin.php';
 $is_dir = false;
@@ -305,6 +466,11 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/modules/payment/cgp_directebanking.php';
 $dst = 'catalog/includes/modules/payment/cgp_directebanking.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_giftcard.php';
+$dst = 'catalog/includes/modules/payment/cgp_giftcard.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
@@ -345,6 +511,16 @@ array_push( $data, data_element( $src, $dst, $is_dir ) );
 
 $src = '../includes/modules/payment/cgp_paypal.php';
 $dst = 'catalog/includes/modules/payment/cgp_paypal.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_paysafecard.php';
+$dst = 'catalog/includes/modules/payment/cgp_paysafecard.php';
+$is_dir = false;
+array_push( $data, data_element( $src, $dst, $is_dir ) );
+
+$src = '../includes/modules/payment/cgp_paysafecash.php';
+$dst = 'catalog/includes/modules/payment/cgp_paysafecash.php';
 $is_dir = false;
 array_push( $data, data_element( $src, $dst, $is_dir ) );
 
