@@ -1,6 +1,6 @@
 <?php
 /**
- * $Id: cgp_giropay.php 30 2011-12-23 17:35:13Z h0ax $
+ * $Id: cgp_bitcoin.php 30 2011-12-23 17:35:13Z h0ax $
  *
  * osCommerce, Open Source E-Commerce Solutions
  * http://www.oscommerce.com
