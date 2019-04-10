@@ -68,6 +68,31 @@ class cgp_ideal extends cgp_generic {
         ) );
         return $selection;
     }
+    
+    /**
+     * Check if configuration_value is stored in DB.
+     *
+     * @return boolean
+     */
+    function check() {
+        $this->resetIssuers();
+        if (! isset($this->_check)) {
+            $check_query = tep_db_query("select configuration_value from " . TABLE_CONFIGURATION . " where configuration_key = 'MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_STATUS'");
+            $this->_check = tep_db_num_rows($check_query);
+        }
+        return $this->_check;
+    }
+    
+    function resetIssuers(){
+        $resultId = tep_db_query("SELECT configuration_id FROM ". TABLE_CONFIGURATION ." WHERE configuration_key='MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH'");
+        $aResult = tep_db_fetch_array($resultId);
+        if (!$aResult ){
+            $resultId = tep_db_query("INSERT INTO ". TABLE_CONFIGURATION ."(configuration_title, configuration_key, configuration_value)
+                        VALUES ( 'Issuer Refresh', 'MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH',0)");
+        } else {
+            $resultId = tep_db_query("UPDATE ". TABLE_CONFIGURATION ." SET configuration_value = '0' WHERE configuration_key = 'MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH'");
+        }
+    }
 
 }
 
