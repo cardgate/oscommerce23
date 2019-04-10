@@ -99,7 +99,7 @@ class cgp_generic {
         
         $this->description = @constant("MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_TEXT_DESCRIPTION");
         // the cardgate version number is the first no. in the signature
-        $this->signature = "cardgateplus|cardgateplus|3.1.2|2.3";
+        $this->signature = "cardgateplus|cardgateplus|3.1.3|2.3";
         $aVersion = explode("|", $this->signature);
         $this->version = $aVersion[2];
         $this->sort_order = defined("MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_SORT_ORDER") ? constant("MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_SORT_ORDER") : 0;
@@ -677,7 +677,7 @@ class cgp_generic {
      * @return array
      */
     function get_banks() {
-        $aBankOptions = $this->getBankOptions($this->is_test);
+        $aBankOptions = $this->getBankOptions();
         $aBanks = array();
         foreach ($aBankOptions as $id => $text) {
             $aBanks[] = array(
@@ -693,42 +693,61 @@ class cgp_generic {
      *
      * @return array
      */
-    private function getBankOptions($is_test) {
-        if (! empty($_SERVER['CGP_GATEWAY_URL'])) {
-            $url = 'https://ralph.api.curopayments.dev/cache/idealDirectoryCUROPayments.dat';
+    private function getBankOptions() {
+        
+        $this->checkBankOptions();
+        $aBanks = $this->fetchBankOptions();
+        return $aBanks;
+    }
+    
+    function checkBankOptions(){
+        // check if option exists
+        $resultId = tep_db_query("SELECT configuration_id FROM ". TABLE_CONFIGURATION ." WHERE configuration_key='MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH'");
+        $aResult = tep_db_fetch_array($resultId);
+        if (!$aResult ){
+            $resultId = tep_db_query("INSERT INTO ". TABLE_CONFIGURATION ."(configuration_title, configuration_key, configuration_value) 
+                        VALUES ( 'Issuer Refresh', 'MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH',0)");
+        }
+        $resultId = tep_db_query("SELECT configuration_value FROM ". TABLE_CONFIGURATION ." WHERE configuration_key='MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH'");
+        $aResult = tep_db_fetch_array($resultId);
+        $iIssuerRefresh = (int) $aResult['configuration_value'];
+        if ($iIssuerRefresh < time()) {
+            $this->cacheBankOptions();
+        }
+        
+    }
+    
+    function cacheBankOptions(){
+        
+        if ($this->is_test) {
+            $url = 'https://secure-staging.curopayments.net/cache/idealDirectoryCUROPayments.dat';
         } else {
-            if ($is_test) {
-                $url = 'https://secure-staging.curopayments.net/cache/idealDirectoryCUROPayments.dat';
-            } else {
-                $url = 'https://secure.curopayments.net/cache/idealDirectoryCUROPayments.dat';
-            }
+            $url = 'https://secure.curopayments.net/cache/idealDirectoryCUROPayments.dat';
         }
         
         if (! ini_get('allow_url_fopen') || ! function_exists('file_get_contents')) {
-            $result = false;
+            $sIssuers = false;
         } else {
-            $result = file_get_contents($url);
+            $sIssuers = file_get_contents($url);
         }
+        $resultId = tep_db_query("SELECT configuration_id FROM ". TABLE_CONFIGURATION ." WHERE configuration_key='MODULE_PAYMENT_CGP_IDEAL_ISSUERS'");
+        $aResult = tep_db_fetch_array($resultId);
         
-        $aBanks = array();
-        
-        if ($result) {
-            $aBanks = unserialize($result);
-            $aBanks[0] = MODULE_PAYMENT_CGP_IDEAL_CHOOSE_BANK;
+        if (!$aResult ){
+            $resultId = tep_db_query("INSERT INTO ". TABLE_CONFIGURATION ."(configuration_title, configuration_key, configuration_value)
+                        VALUES ( 'Issuers', 'MODULE_PAYMENT_CGP_IDEAL_ISSUERS','".$sIssuers."')");
+        } else {
+            $resultId = tep_db_query("UPDATE ". TABLE_CONFIGURATION ." SET configuration_value = '".$sIssuers ."' WHERE configuration_key = 'MODULE_PAYMENT_CGP_IDEAL_ISSUERS'");
         }
-        if (count($aBanks) < 1) {
-            $aBanks = array(
-                'ABNANL2A' => 'ABN Amro',
-                'ASNBNL21' => 'ASN Bank',
-                'INGBNL2A' => 'ING Bank',
-                'KNABNL2H' => 'Knab',
-                'RABONL2U' => 'Rabobank',
-                'RBRBNL21' => 'RegioBank',
-                'SNSBNL2A' => 'SNS Bank',
-                'TRIONL2U' => 'Triodos Bank',
-                'FVLBNL22' => 'Van Landschot Bank'
-            );
-        }
+        $iIssuerRefresh = (24 * 60 * 60) + time();
+        $resultId = tep_db_query("UPDATE ". TABLE_CONFIGURATION ." SET configuration_value = '".$iIssuerRefresh."' WHERE configuration_key = 'MODULE_PAYMENT_CGP_IDEAL_ISSUER_REFRESH'");
+    }
+    
+    function fetchBankOptions(){
+        $resultId = tep_db_query("SELECT configuration_value FROM ". TABLE_CONFIGURATION ." WHERE configuration_key='MODULE_PAYMENT_CGP_IDEAL_ISSUERS'");
+        $aResult = tep_db_fetch_array($resultId);
+        $aBanks = unserialize($aResult['configuration_value']);
+        $aBanks[0] = MODULE_PAYMENT_CGP_IDEAL_CHOOSE_BANK;
         return $aBanks;
     }
 
