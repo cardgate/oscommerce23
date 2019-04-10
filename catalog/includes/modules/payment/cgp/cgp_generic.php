@@ -697,7 +697,6 @@ class cgp_generic {
         
         $this->checkBankOptions();
         $aBanks = $this->fetchBankOptions();
-        var_dump($abanks);
         return $aBanks;
     }
     
