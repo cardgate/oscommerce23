@@ -99,7 +99,7 @@ class cgp_generic {
         
         $this->description = @constant("MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_TEXT_DESCRIPTION");
         // the cardgate version number is the first no. in the signature
-        $this->signature = "cardgateplus|cardgateplus|3.1.3|2.3";
+        $this->signature = "cardgateplus|cardgateplus|3.1.4|2.3";
         $aVersion = explode("|", $this->signature);
         $this->version = $aVersion[2];
         $this->sort_order = defined("MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_SORT_ORDER") ? constant("MODULE_PAYMENT_CGP_" . $this->module_cgp_text . "_SORT_ORDER") : 0;
@@ -564,6 +564,10 @@ class cgp_generic {
             case "GIFTCARD":
                 $payment_option = tep_draw_hidden_field('option', 'giftcard');
                 break;
+
+	        case "ONLINEUEBERWEISEN":
+		        $payment_option = tep_draw_hidden_field('option', 'onlineueberweisen');
+		        break;
         }
         
         // generate items list
@@ -883,7 +887,8 @@ class cgp_generic {
                             'billink',
                             'idealqr',
                             'paysafecash',
-                            'giftcard'
+                            'giftcard',
+	                        'onlineueberweisen'
        );
        return $payments;
     }

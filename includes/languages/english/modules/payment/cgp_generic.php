@@ -154,5 +154,11 @@ define( 'MODULE_PAYMENT_CGP_BITCOIN_TEXT_DESCRIPTION', '<img src="images/icon_po
 define( 'MODULE_PAYMENT_CGP_IDEALQR_TEXT_TITLE', 'iDEAL QR' );
 define( 'MODULE_PAYMENT_CGP_IDEALQR_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
 
+/**
+ * OnlineÜberweisen texts
+ */
+define( 'MODULE_PAYMENT_CGP_ONLINEUEBERWEISEN_TEXT_TITLE', 'OnlineÜberweisen' );
+define( 'MODULE_PAYMENT_CGP_ONLINEUEBERWEISEN_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
 
 ?>
