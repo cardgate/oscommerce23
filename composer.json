@@ -1,0 +1,15 @@
+{
+  "name": "cardgate/oscommerce23",
+  "type": "library",
+  "description": "CardGate payment processing module for osCommerce 2.3",
+  "homepage": "https://www.cardgate.com",
+  "keywords": [
+    "oscommerce",
+    "cardgate",
+    "payment"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": { "Cardgate\\oscommerce23\" : "" }
+  }
+}
