@@ -2,6 +2,8 @@
 
 # CardGate module for osCommerce 2.3
 
+[![Build Status](https://travis-ci.org/cardgate/oscommerce23.svg?branch=master)](https://travis-ci.org/cardgate/oscommerce23)
+
 ## Support
 
 This plugin supports osCommerce version **2.3.x** .
