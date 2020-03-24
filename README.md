@@ -6,7 +6,7 @@
 
 ## Support
 
-This plugin supports osCommerce version **2.3.x** .
+This plugin supports osCommerce version **2.3.x**
 
 ## Preparation
 
@@ -15,9 +15,9 @@ Please visit [My CardGate](https://my.cardgate.com/) and retrieve your credentia
 
 ## Installation
 
-1. Download and unzip the most recent [source code](https://github.com/cardgate/oscommerce23/releases/) file on your desktop.
+1. Download and unzip the most recent [cardgate.zip](https://github.com/cardgate/oscommerce23/releases/) file on your desktop.
 
-2. Upload **all folders and files** in the **catalog** folder, to the **root** folder of your shop.
+2. Upload the **contents** of the **cardgate** folder, to the **root** folder of your shop.
 
 
 ## Configuration
