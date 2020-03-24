@@ -6,7 +6,7 @@
 
 ## Support
 
-Deze plug-in is geschikt voor osCommerce versie **2.3.x** .
+Deze plug-in is geschikt voor osCommerce versie **2.3.x**
 
 ## Voorbereiding
 
