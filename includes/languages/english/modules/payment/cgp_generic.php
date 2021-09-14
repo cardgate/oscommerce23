@@ -160,5 +160,11 @@ define( 'MODULE_PAYMENT_CGP_IDEALQR_TEXT_DESCRIPTION', '<img src="images/icon_po
 define( 'MODULE_PAYMENT_CGP_ONLINEUEBERWEISEN_TEXT_TITLE', 'OnlineÜberweisen' );
 define( 'MODULE_PAYMENT_CGP_ONLINEUEBERWEISEN_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
 
+/**
+ * SprayPay texts
+ */
+define( 'MODULE_PAYMENT_CGP_SPRAYPAY_TEXT_TITLE', 'SprayPay' );
+define( 'MODULE_PAYMENT_CGP_SPRAYPAY_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.cardgate.com" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit CardGate.com website for more information</a>' );
+
 
 ?>
